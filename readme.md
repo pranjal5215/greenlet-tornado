@@ -27,4 +27,4 @@ Example Usage:
         def helper(self):
             # Fetch something. greenlet_fetch() will block until the request is complete,
             # but the tornado IOLoop can do other things in the meantime.
-            greenlet_fetch("http://www.mopub.com")
+            http_response = greenlet_fetch("http://www.mopub.com")

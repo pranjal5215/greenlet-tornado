@@ -61,8 +61,6 @@ def greenlet_fetch(request, **kwargs):
     # Now, yield control back to the master greenlet, and wait for data to be sent to us.
     response = gr.parent.switch()
 
-    http_client.close()
-
     # Raise the exception, if any.
     response.rethrow()
     return response
